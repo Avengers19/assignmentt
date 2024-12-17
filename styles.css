@@ -1,0 +1,118 @@
+/* General Styles */
+/* Global styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('./img/images.jpg');
+	  background-position: center;
+    background-repeat: no-repeat;
+	background-size:200%;
+}
+
+/* Hero Section with Background Image */
+#hero-section {
+    background-image: url('./img/image.jpeg'); /* Replace with your path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    height: 500px; /* Adjust height as needed */
+}
+
+/* Header Background */
+header {
+    background-image: url('./img/image.jpg'); /* Replace with your path */
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+/* Services Section */
+#services {
+    background-image: url('./img/services-background.jpg'); /* Replace with your path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black; /* Adjust text color for visibility */
+    padding: 50px 0;
+}
+
+/* Footer */
+footer {
+    background: #222; /* Dark background for footer */
+    color: white;
+}
+
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+	background-image:"C:\Users\HP\OneDrive\Desktop\assignment\img\images.jpeg";
+}
+
+#backgroundCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.text-white {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+/* Header container */
+/* Header container with reduced height */
+/* Header container with reduced height */
+header {
+    height: 100px; /* Reduced from 300px */
+    position: relative;
+    overflow: hidden;
+}
+
+/* 3D Animation container */
+#headerAnimation {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, rgba(0, 123, 255, 0.8), rgba(0, 0, 128, 0.8));
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    animation: moveBackground 10s infinite alternate ease-in-out;
+}
+
+/* Keyframes for background movement */
+@keyframes moveBackground {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+        transform: translate3d(10px, -20px, 0) scale(1.1);
+    }
+    100% {
+        transform: translate3d(-10px, 20px, 0) scale(1);
+    }
+}
+
+/* Ensure navbar content is above the animation */
+.z-1 {
+    z-index: 1;
+    position: relative;
+}
+/* Service Buttons - Enlarge on Hover */
+#services .col-md-4 img {
+    transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+}
+
+#services .col-md-4 img:hover {
+    transform: scale(1.1); /* Enlarge image by 10% */
+}
